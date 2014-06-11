@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import urllib2, sys, json
+import urllib2, sys, json, time
 
 # words = u'หมู่เรือปราบปรามโจรสลัด ฝึกใหญ่เตรียมความพร้อม ก่อนออกปฏิบัติงานร่วมกับกองกำลังผสมทางเรือนานาชาติ ที่อ่าวเอเดนและชายฝั่งโซมาเลีย ในวันที่ 12 กรกฎาคม นี้'
 
@@ -49,7 +49,10 @@ def orchild(msg):
 
 arg = sys.argv[1]
 if arg == 'swatch':
-	swath(u'"เอกนัฏ"โพสต์Instagram"สุเทพ"ออกจากห้องผ่าตัดแล้วอาการปลอดภัย')
+	start_time = time.time()
+	print "start time ", start_time
+	swath(u'"ทดสอบเวลา')
+	print "total time ", time.time()-start_time, "second"
 elif arg == 'orchild':
 	orchild()
 
