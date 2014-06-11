@@ -1,19 +1,23 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import thaisemantics, sys, time, os
+import thaisemantics, sys, time, os, codecs
 
 def wordcut(msg):
 	start_time = time.time()
-	f = open('in.txt','w')
-	f.write(msg)
-	command = os.popen('wordcut <in.txt> out.txt').readline()
-	print command
+	f = codecs.open('in.txt','w', 'utf-8')
+	f.write(u'ตรวจสอบ'.encode('utf-8'))
+	f.close()
+	print(os.popen('wordcut <in.txt> out.txt').readline())
+	#x = _
+	#print(x)
+#	command = os.popen('wordcut <in.txt> out.txt').readline()
+#	print command
 	print time.time()-start_time, "second"
 
 
 arg = sys.argv[1]
-print arg
+#print arg
 
-wordcut('ฉันกำลังเดินออกจากบ้าน')
-# swath(u'ทดสอบ')
+#wordcut('test')
+swath(arg)

@@ -49,7 +49,7 @@ def orchild(msg):
 
 arg = sys.argv[1]
 if arg == 'swatch':
-	swath(u'ฉันกินข้าว')
+	swath(u'"เอกนัฏ"โพสต์Instagram"สุเทพ"ออกจากห้องผ่าตัดแล้วอาการปลอดภัย')
 elif arg == 'orchild':
 	orchild()
 
